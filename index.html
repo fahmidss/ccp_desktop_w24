@@ -7,13 +7,65 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://use.typekit.net/sjz2qdt.css">
+    <script>
+        window.addEventListener('DOMContentLoaded', (event) => {
+            // Set to my birthdate
+            const targetDate = new Date("2024-11-27T00:00:01");
+
+            // HTML element where to display the countdown
+            const countdownElement = document.getElementById('countdown');
+
+            // Define function 
+            function updateCountdown() {
+                // Get current date and time
+                const currentDate = new Date();
+
+                // Calculate the time difference between the target date and the current date
+                const timeDifference = targetDate.getTime() - currentDate.getTime();
+
+                // Convert the time difference to seconds
+                let totalSeconds = Math.floor(timeDifference / 1000);
+
+                // Calculate the remaining hours, minutes, and seconds
+                const hours = Math.floor(totalSeconds / 3600);
+                const minutes = Math.floor((totalSeconds % 3600) / 60);
+                const seconds = Math.floor(totalSeconds % 60);
+
+                // Update the HTML content with the countdown timer
+                countdownElement.innerHTML = `${hours} hours, ${minutes} minutes, ${seconds} seconds remaining`;
+
+                // Check if the countdown has reached zero
+                if (totalSeconds < 0) {
+                    countdownElement.innerHTML = "Countdown has ended";
+                    clearInterval(intervalId);
+                }
+            }
+            // Call the updateCountdown function every second
+            const intervalId = setInterval(updateCountdown, 1000);
+        });
+
+        function on() {
+            document.getElementById("overlay").style.display = "block";
+        }
+
+        function off() {
+            document.getElementById("overlay").style.display = "none";
+        }
+    </script>
 </head>
 <body>
-    <a class="skip-to-main" href="#main">Skip to Main Content</a>
     <header>
+        <div class="header-content">
+            <a href="#main" class="skip-to-main">Skip to Main Content</a>
+            <a href="index.html"> 
+                <img src="images/flower-logo.png" width="50" alt="flower logo links back to home" class="logo">
+            </a>
+        </div>
         <nav>
             <input type="checkbox" id="nav-toggle" class="nav-toggle">
             <label for="nav-toggle" class="nav-toggle-label">
+                -
                 <span></span>
             </label>
             <ul>
@@ -23,18 +75,56 @@
                 <li><a href="travel.html">Travel</a></li>
             </ul>
         </nav>
-        <h1>HW 2 - CCO HTML</h1>
     </header>
     <main id="main">
+        <h1>Mida's Website!</h1>
         <div>
-            <p>Welcome to Infomania! your go-to destination for all things pets, recipes, and travel! Explore a world of captivating content where we cater to your love for furry companions, culinary delights, and globetrotting adventures. </p>
+            <p>Welcome to Mida's class website! Your go-to destination for all things pets, recipes, and travel! Explore a world of captivating content where we cater to your love for furry companions, culinary delights, and globetrotting adventures. </p>
         </div>
-        <div>Click on the links in the menu to get started</div>
-        <!-- Jackie Wolf -->
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
+        <div>
+            <p>Click on the links in the menu to get started</p>
+        </div>
+        <div>
+            <h2>About Me</h2>
+
+            <div class="carousel" tabindex="0">
+                <img src="images/mida-339.png" width = "800" alt="Picture of me at Chicago's Navy Pier ferris wheel">
+                <img src="images/row-1-column-2.png" width = "800" alt="Picture edit with friends">
+                <img src="images/mida2-339.JPG" width = "800" alt="Picture of me at a football game">
+                <img src="images/fahmida_rahman_hs.jpg" width = "800" alt="Mida's headshot">
+          </div>
+            
+
+            <p>My name is Fahmida Rahman but I usually go by Mida! I'm currently a sophomore at the University of Michigan studying User Exeprience (UX) Design with a double minor in Entrepreneurship and Digital Studies. </p>
+            <div class = "aboutme-list">
+                <ul>
+                    <li><b>Date of birth:</b> 11/27/2004</li>
+                    <li><b>Age:</b> 19 years old</li>
+                    <li><b>Zodiac sign:</b> Sagittarius</li>
+                    <li><b>Personality type:</b> ESFP</li>
+                    <li><b>Likes:</b> Studio Ghibli, Pinterest, Gaming</li>
+                    <li><b>Dislikes:</b> running out of storage, messy rooms, wind and humidity</li>
+                </ul>
+            </div>
+        </div>
+        <div>
+            <h3>Countdown until my birthday!</h3>
+        </div>
+        <div id="countdown"></div>
+
+        <div id="overlay" onclick="off()">
+            <div id="text">
+                E-mail: fahmida@umich.edu
+                Linkedin: www.linkedin.com/in/midarahman
+                Github: @fahmidss
+            </div>
+        </div>
+          
+        <div style="padding:20px">
+            <h2>Connect with me!</h2>
+            <button onclick="on()">Connect</button>
+        </div>
     </main>
 </body>
 </html>
+

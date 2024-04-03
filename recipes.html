@@ -4,21 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Recipes</title>
-    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://use.typekit.net/sjz2qdt.css">
 </head>
 <body>
-    <a class="skip-to-main" href = "#main">Skip to Main Content</a>
     <header>
+        <div class="header-content">
+            <a href="#main" class="skip-to-main">Skip to Main Content</a>
+            <a href="index.html"> 
+                <img src="images/flower-logo.png" width="50" alt="flower logo links back to home" class="logo">
+            </a>
+
+        </div>
         <nav>
             <input type="checkbox" id="nav-toggle" class="nav-toggle">
             <label for="nav-toggle" class="nav-toggle-label">
+                -
                 <span></span>
             </label>
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="pets.html">Pets</a></li>
-                <li><a href="recipes.html" class="active">Recipes</a></li>
+                <li><a href="recipes.html " class="active">Recipes</a></li>
                 <li><a href="travel.html">Travel</a></li>
             </ul>
         </nav>
@@ -28,7 +36,10 @@
         <h1>Recipes</h1>
         <div>
             <h2>Double Chocolate Cookies</h2>
-            <img src="images/double_chocolate_cookies.png" width = "400" alt="Double chocolate chip cookies">
+            <div class = "main-imgs">
+                <img src="images/double_chocolate_cookies.png" width = "400" alt="Double chocolate chip cookies">
+            </div>
+
             <ul>
                 <li>Origin: Michigan</li>
                 <li>Source: Family Recipe</li>
@@ -54,7 +65,9 @@
         </div>
         <div>
             <h2>Chocolate Chip Banana Bread</h2>
-            <img src="images/chocolate_chip_banana_bread.jpeg" width = "400" alt="Banana bread with chocolate chips">
+            <div class = "main-imgs">
+                <img src="images/chocolate_chip_banana_bread.jpeg" width = "400" alt="Banana bread with chocolate chips">
+            </div>
             <ul>
                 <li>Origin: America</li>
                 <li>Source: <a href="https://www.delish.com/cooking/recipe-ideas/a43369646/chocolate-chip-banana-bread-recipe/">Delish.com</a></li>
@@ -94,7 +107,9 @@
         </div>
         <div>
             <h2>Fettucine Alfredo</h2>
-            <img src="images/fettucine_alfredo.jpeg" width = "400" alt="Bowl of Fettucine Alfredo">
+            <div class = "main-imgs">
+                <img src="images/fettucine_alfredo.jpeg" width = "400" alt="Bowl of Fettucine Alfredo">
+            </div>
             <ul>
                 <li>Origin: Italy</li>
                 <li>Source: <a href="hhttps://www.modernhoney.com/fettuccine-alfredo/">Modernhoney.com</a></li>
